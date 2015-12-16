@@ -1,0 +1,13 @@
+[package]
+name        = "editdistancewf"
+description = "Compute the edit-distance between vectors using the Wagner-Fischer algorithm"
+homepage    = "https://github.com/kjgorman/editdistancewf"
+repoistory  = "https://github.com/kjgorman/editdistancewf"
+license     = "MIT"
+keywords    = ["edit", "distance", "wagner-fischer"]
+version     = "0.1.0"
+authors     = ["kjgorman <kieran@kjgorman.com>"]
+
+[library]
+name        = "editdistancewf"
+path        = "src/lib.rs"
