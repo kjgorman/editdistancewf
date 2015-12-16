@@ -11,4 +11,9 @@ mod basic_distances {
 
         assert_eq!(wf::distance(left.chars(), right.chars()), 0)
     }
+
+    #[test]
+    pub fn simple_differences () {
+        assert_eq!(wf::distance("left".chars(), "lend".chars()), 2)
+    }
 }
