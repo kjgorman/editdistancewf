@@ -8,6 +8,5 @@ keywords    = ["edit", "distance", "wagner-fischer"]
 version     = "0.1.0"
 authors     = ["kjgorman <kieran@kjgorman.com>"]
 
-[library]
-name        = "editdistancewf"
-path        = "src/lib.rs"
+[dev-dependencies]
+quickcheck = "*"
