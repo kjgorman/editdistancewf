@@ -17,7 +17,7 @@ Through crates, as you would usually:
 
 ```toml
 [dependencies]
-edit-distance = "0.1.0"
+editdistancewf = "0.1.0"
 ```
 
 #### usage
