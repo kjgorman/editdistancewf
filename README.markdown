@@ -4,7 +4,7 @@
 [![Build
 Status](https://travis-ci.org/kjgorman/editdistancewf.svg)](https://travis-ci.org/kjgorman/editdistancewf)
 
-[![](http://meritbadge.herokuapp.com/editdistance)](https://crates.io/crates/editdistance)
+[![](http://meritbadge.herokuapp.com/editdistancewf)](https://crates.io/crates/editdistancewf)
 
 A simple crate for finding the
 [edit-distance](https://en.wikipedia.org/wiki/Edit_distance) between
