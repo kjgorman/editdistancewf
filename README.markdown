@@ -1,5 +1,11 @@
 ### editdistancewf
 
+
+[![Build
+Status](https://travis-ci.org/kjgorman/editdistancewf.svg)](https://travis-ci.org/kjgorman/editdistancewf)
+
+[![](http://meritbadge.herokuapp.com/editdistance)](https://crates.io/crates/editdistance)
+
 A simple crate for finding the
 [edit-distance](https://en.wikipedia.org/wiki/Edit_distance) between
 two vectors, using the
