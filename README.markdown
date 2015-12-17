@@ -3,7 +3,6 @@
 
 [![Build
 Status](https://travis-ci.org/kjgorman/editdistancewf.svg)](https://travis-ci.org/kjgorman/editdistancewf)
-
 [![](http://meritbadge.herokuapp.com/editdistancewf)](https://crates.io/crates/editdistancewf)
 
 A simple crate for finding the
