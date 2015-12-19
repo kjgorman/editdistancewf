@@ -16,32 +16,35 @@ pub fn distance<T, I: Iterator<Item=T>>(left_stream: I, right_stream: I) -> usiz
         let width = left.len() + 1;
         let depth = right.len() + 1;
 
-        let mut matrix = vec![vec![0; depth]; width];
+        let mut current  = vec![0; width];
+        let mut previous = vec![0; width];
 
         for i in 0..width {
-            matrix[i][0] = i;
+            previous[i] = i;
         }
 
-        for j in 0..depth {
-            matrix[0][j] = j;
-        }
+        current[0] = previous[0] + 1;
 
-        for j in 1..depth {
-            for i in 1..width {
-                // these elements match, propagate current distances
-                if left[i-1] == right[j-1] {
-                    matrix[i][j] = matrix[i-1][j-1];
+        for row in 1..depth {
+            for column in 1..width {
+                if left[column - 1] == right[row - 1] {
+                    current[column] = previous[column - 1];
                 } else {
-                    matrix[i][j] = *[
-                        matrix[i-1][j] + 1,    // deletion
-                        matrix[i][j-1] + 1,    // insertion
-                        matrix[i-1][j-1] + 1]  // substitution
+                    let above = previous[column]     + 1;
+                    let diag  = previous[column - 1] + 1;
+                    let aside = current [column - 1] + 1;
+
+                    current[column] = *[above, diag, aside]
                         .iter()
                         .min()
                         .unwrap();
                 }
             }
+
+            previous = current.clone();
+            current = vec![0; width];
+            current[0] = row+1;
         }
 
-        matrix[width-1][depth-1]
+        previous[width-1]
     }
