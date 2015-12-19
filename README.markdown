@@ -27,7 +27,7 @@ There is a single function in the `editdistancewf` namespace,
 iterators are consumed by the comparison.
 
 ```rust
-extern create editdistancewf as wf;
+extern crate editdistancewf as wf;
 
 wf::distance("foo".chars(), "bar".chars())
     // => 3 : usize
