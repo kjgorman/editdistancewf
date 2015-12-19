@@ -42,7 +42,6 @@ pub fn distance<T, I: Iterator<Item=T>>(left_stream: I, right_stream: I) -> usiz
             }
 
             previous = current.clone();
-            current = vec![0; width];
             current[0] = row+1;
         }
 
